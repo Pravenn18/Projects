@@ -9,7 +9,6 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-  //   setVideos(null);
 
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items))
